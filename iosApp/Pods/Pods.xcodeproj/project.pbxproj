@@ -15,89 +15,91 @@
 				4AD548150BBF57AC63420CBAA0A0BA09 /* [CP] Copy dSYMs */,
 			);
 			dependencies = (
-				3F27CC290EFA47E1102B11A24275787D /* PBXTargetDependency */,
+				F7F8B6856F7C35EBE6F0D7AE16592C0A /* PBXTargetDependency */,
 			);
 			name = composeApp;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		7FB048690E513DBB16A611FBB0193E9A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E5D90EA2F1195A769F5F7470EFB0529A /* PrivacyInfo.xcprivacy */; };
 		85FB1C249B286D12BDB4593EDF36CB6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30453446C5310EA114B978294858C9A5 /* Foundation.framework */; };
+		8C5B3E3BCD040445F91250F248194E72 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E5D90EA2F1195A769F5F7470EFB0529A /* PrivacyInfo.xcprivacy */; };
 		9CB15A7F8A11ED0F4EAA967CD97FA581 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 280B7D6C59D5B3765FC75565D35B68CA /* Reachability.m */; };
 		A598F2F5AC9E77E1C74555965089EA93 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DE96DC511BD1CE643E8E9A8CE72374 /* SystemConfiguration.framework */; };
 		BE771A84869C2A311C50058EE38CD1EA /* Reachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19E3BAE987A5F6376A127DB291FE14BB /* Reachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C39E6FC8256EDCE5AF1E1E670FA77B71 /* Reachability-Reachability_Privacy in Resources */ = {isa = PBXBuildFile; fileRef = DFC89BE171DE7E648C53797695D8A220 /* Reachability-Reachability_Privacy */; };
-		C40976F791B43D9862C686B1C4FEB982 /* Pods-iosApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DC7F9924F99FEE67A9AD3BEE09A10C /* Pods-iosApp-dummy.m */; };
+		C40976F791B43D9862C686B1C4FEB982 /* Pods-iosApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DB2A5F5DADA1DDE45F36B1A2D6AC16 /* Pods-iosApp-dummy.m */; };
 		E2E7EC700C96B11FFFCCE7526E302150 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30453446C5310EA114B978294858C9A5 /* Foundation.framework */; };
 		EBE49189B9725BE13038660CCD232C04 /* Reachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DEEF9C367A3CA086260BFD3B116AE /* Reachability-dummy.m */; };
-		F975E1081F4B348F7F5BA4B1342B90F7 /* Pods-iosApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F87A626222A8D9B26448A9FEB04FD0DF /* Pods-iosApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F975E1081F4B348F7F5BA4B1342B90F7 /* Pods-iosApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 015E0D7EA7331961AB63E5AFECA86BB5 /* Pods-iosApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB52B2A94A1F01C3AA28A3895B900DCC /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F5852BBBBF79FCDF7EB5FAB1D23E371 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		48FC08273A8E93FC39DB1BDE3643464E /* PBXContainerItemProxy */ = {
+		105946528FC3ABACA68D3001E385B5E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CAA047C0F5E4106F3904E8497FA17F97;
 			remoteInfo = Reachability;
 		};
-		A90C188EC6423AA90972D5F85A9B80FF /* PBXContainerItemProxy */ = {
+		2FAFF5A2682FB3996B0EE63C50A4CA29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CAA047C0F5E4106F3904E8497FA17F97;
 			remoteInfo = Reachability;
 		};
-		FA3CC0566161EF5FB9EA4533875733BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B96E9866C2872A8B63836A92F517CD48;
-			remoteInfo = composeApp;
-		};
-		FEF995C60D1CDEF594C5C88DEDC8DFB4 /* PBXContainerItemProxy */ = {
+		8B4FACF376F1BAE76A6BD8FE3854244E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2787856C227A709315E3C9C4355A440;
 			remoteInfo = "Reachability-Reachability_Privacy";
 		};
+		A07D7942EF54E690D021DBFF9082FB1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B96E9866C2872A8B63836A92F517CD48;
+			remoteInfo = composeApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0187F135D5F61750CD24C3E04B6E8B64 /* Pods-iosApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iosApp-frameworks.sh"; sourceTree = "<group>"; };
+		015E0D7EA7331961AB63E5AFECA86BB5 /* Pods-iosApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iosApp-umbrella.h"; sourceTree = "<group>"; };
 		0C471AF3F7DF0F7067B9DED238EB039E /* Reachability-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Reachability-Info.plist"; sourceTree = "<group>"; };
+		11C9B998CE0869936AE6BE69270DAAC9 /* Pods-iosApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iosApp.modulemap"; sourceTree = "<group>"; };
 		151F8B5AE4EA5E512F02A7E2AD9ADE07 /* Reachability.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reachability.debug.xcconfig; sourceTree = "<group>"; };
+		166225E3D6F8F42480A3C4A6A2A0F54D /* compose-resources */ = {isa = PBXFileReference; includeInIndex = 1; name = "compose-resources"; path = "build/compose/cocoapods/compose-resources"; sourceTree = "<group>"; };
 		18DE96DC511BD1CE643E8E9A8CE72374 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		19E3BAE987A5F6376A127DB291FE14BB /* Reachability-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reachability-umbrella.h"; sourceTree = "<group>"; };
+		244FC2DAA936A0B07ACEFDC74E2D54B8 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		245493C805FB6C49C32457ECE929CD15 /* Reachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reachability-prefix.pch"; sourceTree = "<group>"; };
 		280B7D6C59D5B3765FC75565D35B68CA /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		30453446C5310EA114B978294858C9A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		362FCE829765102E526ECA8787C62CED /* composeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = composeApp.release.xcconfig; sourceTree = "<group>"; };
 		3D2D79531596BF868BF1C132BC26D44E /* Reachability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reachability.release.xcconfig; sourceTree = "<group>"; };
-		3F64BADB16C311E9D09DAD0116F684F4 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		400FF55D0451E7A8F33A3D0D3E11C1B9 /* Reachability */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reachability; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5852BBBBF79FCDF7EB5FAB1D23E371 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		54DC7F9924F99FEE67A9AD3BEE09A10C /* Pods-iosApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iosApp-dummy.m"; sourceTree = "<group>"; };
-		5AC974169B09D4545F741E9A2147610E /* Pods-iosApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosApp-Info.plist"; sourceTree = "<group>"; };
+		55ABB06C8A1800962A74E007E7733796 /* Pods-iosApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iosApp-frameworks.sh"; sourceTree = "<group>"; };
+		6F3B5FED07117E377CFAC3D49B490F17 /* Pods-iosApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iosApp-resources.sh"; sourceTree = "<group>"; };
 		6F6DEEF9C367A3CA086260BFD3B116AE /* Reachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reachability-dummy.m"; sourceTree = "<group>"; };
-		7698B5F6B1B5EC19A5F68E92763A39D8 /* composeApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = composeApp.framework; path = build/cocoapods/framework/composeApp.framework; sourceTree = "<group>"; };
+		76A263267985B0185D85E24D40FCEE9A /* Pods-iosApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosApp-Info.plist"; sourceTree = "<group>"; };
+		76D28488EA8CF5C697DFF07967A9960E /* Pods-iosApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		77ADBA21D3A9CAE14B76A705E15A70CD /* composeApp.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = composeApp.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7A889F581F0A3E0FCFAD7E7725BFAD6D /* Reachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Reachability.modulemap; sourceTree = "<group>"; };
 		7DB1B0939AAFD84CC8023F8632C1DBEA /* ResourceBundle-Reachability_Privacy-Reachability-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Reachability_Privacy-Reachability-Info.plist"; sourceTree = "<group>"; };
-		7F7EFC90F46F749510383BF02687E754 /* composeApp.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = composeApp.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		8B524AABE529FB8A2D151B05321336E0 /* Pods-iosApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iosApp.modulemap"; sourceTree = "<group>"; };
-		9BB0B8B698D4C35D4F9A07EF70910170 /* Pods-iosApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		914C89DE2DAEEDFCDE0576D493B4C332 /* composeApp-copy-dsyms.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "composeApp-copy-dsyms.sh"; sourceTree = "<group>"; };
+		9226C33213D1043294836514FD1525D8 /* composeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = composeApp.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F1FFC8B10F4D7D4F37606E8959B3F29 /* Pods-iosApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iosApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9FECCB5AFF87D121F15BA01E683C7932 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		B097DD7534E741D5C41838011D755842 /* Pods-iosApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-iosApp"; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE99701454B1065AFD463A7609F72EF2 /* composeApp-copy-dsyms.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "composeApp-copy-dsyms.sh"; sourceTree = "<group>"; };
+		BE9440AE9F68BB8C660470646EDF7F92 /* composeApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = composeApp.framework; path = build/cocoapods/framework/composeApp.framework; sourceTree = "<group>"; };
+		D06DBCD4D25D12FD0C2E00FF1E1E65A9 /* composeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = composeApp.release.xcconfig; sourceTree = "<group>"; };
 		DFC89BE171DE7E648C53797695D8A220 /* Reachability-Reachability_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Reachability-Reachability_Privacy"; path = Reachability_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E462E23B3674BF94EAB1504D506F2803 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E4C923318724794E3CC670804C2D6A6B /* Pods-iosApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iosApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E5D90EA2F1195A769F5F7470EFB0529A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Framework/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		F87A626222A8D9B26448A9FEB04FD0DF /* Pods-iosApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iosApp-umbrella.h"; sourceTree = "<group>"; };
-		FCE9AEB97135A3172216167DE33409C3 /* composeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = composeApp.debug.xcconfig; sourceTree = "<group>"; };
+		E6DB2A5F5DADA1DDE45F36B1A2D6AC16 /* Pods-iosApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iosApp-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +111,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4AA979C2CE20346B27877135CAC3B3AD /* Frameworks */ = {
+		3224B8A675010E9CA5538554982281F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,14 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11C970DEAE48C6D0282DFE54684F53F1 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				52A898E555C2DBD7D25A7E44754C3FC6 /* Pods-iosApp */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,32 +138,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		482A2BA643A469FD68A752BAF48D6FFE /* Support Files */ = {
+		5F61BD45D10D05C4EE2BE3044D293D23 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BE99701454B1065AFD463A7609F72EF2 /* composeApp-copy-dsyms.sh */,
-				FCE9AEB97135A3172216167DE33409C3 /* composeApp.debug.xcconfig */,
-				362FCE829765102E526ECA8787C62CED /* composeApp.release.xcconfig */,
+				914C89DE2DAEEDFCDE0576D493B4C332 /* composeApp-copy-dsyms.sh */,
+				9226C33213D1043294836514FD1525D8 /* composeApp.debug.xcconfig */,
+				D06DBCD4D25D12FD0C2E00FF1E1E65A9 /* composeApp.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../iosApp/Pods/Target Support Files/composeApp";
-			sourceTree = "<group>";
-		};
-		52A898E555C2DBD7D25A7E44754C3FC6 /* Pods-iosApp */ = {
-			isa = PBXGroup;
-			children = (
-				8B524AABE529FB8A2D151B05321336E0 /* Pods-iosApp.modulemap */,
-				9F1FFC8B10F4D7D4F37606E8959B3F29 /* Pods-iosApp-acknowledgements.markdown */,
-				9BB0B8B698D4C35D4F9A07EF70910170 /* Pods-iosApp-acknowledgements.plist */,
-				54DC7F9924F99FEE67A9AD3BEE09A10C /* Pods-iosApp-dummy.m */,
-				0187F135D5F61750CD24C3E04B6E8B64 /* Pods-iosApp-frameworks.sh */,
-				5AC974169B09D4545F741E9A2147610E /* Pods-iosApp-Info.plist */,
-				F87A626222A8D9B26448A9FEB04FD0DF /* Pods-iosApp-umbrella.h */,
-				3F64BADB16C311E9D09DAD0116F684F4 /* Pods-iosApp.debug.xcconfig */,
-				9FECCB5AFF87D121F15BA01E683C7932 /* Pods-iosApp.release.xcconfig */,
-			);
-			name = "Pods-iosApp";
-			path = "Target Support Files/Pods-iosApp";
 			sourceTree = "<group>";
 		};
 		73E373CD98F8953AD53383B954C6A4CF /* Resources */ = {
@@ -178,14 +155,6 @@
 				E5D90EA2F1195A769F5F7470EFB0529A /* PrivacyInfo.xcprivacy */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		770AB948113845A5A2EB13724CF6B0A1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7698B5F6B1B5EC19A5F68E92763A39D8 /* composeApp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7AECD277D93729F7879587DE9D2EC54C /* Products */ = {
@@ -198,12 +167,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		81ED89A183D5AD27FA70A61202B7E1A2 /* Development Pods */ = {
+		81E06B9C22BA0E415C70E83077CE3F47 /* composeApp */ = {
 			isa = PBXGroup;
 			children = (
-				F64B4FD6A4FD3DA44C6FCDA566D86EA4 /* composeApp */,
+				166225E3D6F8F42480A3C4A6A2A0F54D /* compose-resources */,
+				A6E3634254C084C7F0818372C89DA653 /* Frameworks */,
+				A8F7D558180B9DADF42EDB86B94A4820 /* Pod */,
+				5F61BD45D10D05C4EE2BE3044D293D23 /* Support Files */,
 			);
-			name = "Development Pods";
+			name = composeApp;
+			path = ../../composeApp;
 			sourceTree = "<group>";
 		};
 		97BA631FEFBF1D04340310696E4C11D1 /* Pods */ = {
@@ -223,6 +196,22 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		A6E3634254C084C7F0818372C89DA653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE9440AE9F68BB8C660470646EDF7F92 /* composeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8F7D558180B9DADF42EDB86B94A4820 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				77ADBA21D3A9CAE14B76A705E15A70CD /* composeApp.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		B3C97EEDF6B0FC46F1FD5D8D3607D3E7 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,35 +224,50 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		C1EC075882C6674CA31D9D119ADDF2DC /* Pod */ = {
+		BA6B7BC2729F657E9D3682E55CA6E980 /* Pods-iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				7F7EFC90F46F749510383BF02687E754 /* composeApp.podspec */,
+				11C9B998CE0869936AE6BE69270DAAC9 /* Pods-iosApp.modulemap */,
+				E4C923318724794E3CC670804C2D6A6B /* Pods-iosApp-acknowledgements.markdown */,
+				76D28488EA8CF5C697DFF07967A9960E /* Pods-iosApp-acknowledgements.plist */,
+				E6DB2A5F5DADA1DDE45F36B1A2D6AC16 /* Pods-iosApp-dummy.m */,
+				55ABB06C8A1800962A74E007E7733796 /* Pods-iosApp-frameworks.sh */,
+				76A263267985B0185D85E24D40FCEE9A /* Pods-iosApp-Info.plist */,
+				6F3B5FED07117E377CFAC3D49B490F17 /* Pods-iosApp-resources.sh */,
+				015E0D7EA7331961AB63E5AFECA86BB5 /* Pods-iosApp-umbrella.h */,
+				E462E23B3674BF94EAB1504D506F2803 /* Pods-iosApp.debug.xcconfig */,
+				244FC2DAA936A0B07ACEFDC74E2D54B8 /* Pods-iosApp.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Pods-iosApp";
+			path = "Target Support Files/Pods-iosApp";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				81ED89A183D5AD27FA70A61202B7E1A2 /* Development Pods */,
+				DB2D0B7CE4B9F3DF4C66009F5A5495A4 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				97BA631FEFBF1D04340310696E4C11D1 /* Pods */,
 				7AECD277D93729F7879587DE9D2EC54C /* Products */,
-				11C970DEAE48C6D0282DFE54684F53F1 /* Targets Support Files */,
+				D456857FB6E5BC3266BEC21401D60DB5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F64B4FD6A4FD3DA44C6FCDA566D86EA4 /* composeApp */ = {
+		D456857FB6E5BC3266BEC21401D60DB5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				770AB948113845A5A2EB13724CF6B0A1 /* Frameworks */,
-				C1EC075882C6674CA31D9D119ADDF2DC /* Pod */,
-				482A2BA643A469FD68A752BAF48D6FFE /* Support Files */,
+				BA6B7BC2729F657E9D3682E55CA6E980 /* Pods-iosApp */,
 			);
-			name = composeApp;
-			path = ../../composeApp;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DB2D0B7CE4B9F3DF4C66009F5A5495A4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81E06B9C22BA0E415C70E83077CE3F47 /* composeApp */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		F69AD2F2BDB530929B8D59C0A70807CE /* Support Files */ = {
@@ -317,7 +321,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F2432651A59CB693D52646099EB244E8 /* PBXTargetDependency */,
+				00AD2E06B3D1A27BD1C17E4EABD0DE7B /* PBXTargetDependency */,
 			);
 			name = Reachability;
 			productName = Reachability;
@@ -326,11 +330,11 @@
 		};
 		D2787856C227A709315E3C9C4355A440 /* Reachability-Reachability_Privacy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 837B494087B0B20F44D71755F9025D35 /* Build configuration list for PBXNativeTarget "Reachability-Reachability_Privacy" */;
+			buildConfigurationList = AC6DA151F16E49ACF7BE713198C682AD /* Build configuration list for PBXNativeTarget "Reachability-Reachability_Privacy" */;
 			buildPhases = (
-				7C327800CCDB4183B84CDFD12B178F14 /* Sources */,
-				4AA979C2CE20346B27877135CAC3B3AD /* Frameworks */,
-				6FB7FFF9DB8791C07D3A19A7523EF3BC /* Resources */,
+				419DD44E40DC238E8E9BC68F58524301 /* Sources */,
+				3224B8A675010E9CA5538554982281F6 /* Frameworks */,
+				F14A6C7E993870B96D6580BA92E0BEC0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -353,8 +357,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				74404E7FCCE919B75B696EE648907E01 /* PBXTargetDependency */,
-				716F7C1CDA254CEB794EE355751AA166 /* PBXTargetDependency */,
+				A0FC31AD41DF3A2CCD6078727C4FF833 /* PBXTargetDependency */,
+				F2A0022A2945AEB7FA8B37D1C9884A12 /* PBXTargetDependency */,
 			);
 			name = "Pods-iosApp";
 			productName = Pods_iosApp;
@@ -399,19 +403,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6FB7FFF9DB8791C07D3A19A7523EF3BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7FB048690E513DBB16A611FBB0193E9A /* PrivacyInfo.xcprivacy in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8A8BCE0542BF8F6B6D2FD9A83D1B9B6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C39E6FC8256EDCE5AF1E1E670FA77B71 /* Reachability-Reachability_Privacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F14A6C7E993870B96D6580BA92E0BEC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5B3E3BCD040445F91250F248194E72 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +452,7 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7C327800CCDB4183B84CDFD12B178F14 /* Sources */ = {
+		419DD44E40DC238E8E9BC68F58524301 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,53 +479,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3F27CC290EFA47E1102B11A24275787D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Reachability;
-			target = CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */;
-			targetProxy = 48FC08273A8E93FC39DB1BDE3643464E /* PBXContainerItemProxy */;
-		};
-		716F7C1CDA254CEB794EE355751AA166 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = composeApp;
-			target = B96E9866C2872A8B63836A92F517CD48 /* composeApp */;
-			targetProxy = FA3CC0566161EF5FB9EA4533875733BA /* PBXContainerItemProxy */;
-		};
-		74404E7FCCE919B75B696EE648907E01 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Reachability;
-			target = CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */;
-			targetProxy = A90C188EC6423AA90972D5F85A9B80FF /* PBXContainerItemProxy */;
-		};
-		F2432651A59CB693D52646099EB244E8 /* PBXTargetDependency */ = {
+		00AD2E06B3D1A27BD1C17E4EABD0DE7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Reachability-Reachability_Privacy";
 			target = D2787856C227A709315E3C9C4355A440 /* Reachability-Reachability_Privacy */;
-			targetProxy = FEF995C60D1CDEF594C5C88DEDC8DFB4 /* PBXContainerItemProxy */;
+			targetProxy = 8B4FACF376F1BAE76A6BD8FE3854244E /* PBXContainerItemProxy */;
+		};
+		A0FC31AD41DF3A2CCD6078727C4FF833 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reachability;
+			target = CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */;
+			targetProxy = 105946528FC3ABACA68D3001E385B5E4 /* PBXContainerItemProxy */;
+		};
+		F2A0022A2945AEB7FA8B37D1C9884A12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = composeApp;
+			target = B96E9866C2872A8B63836A92F517CD48 /* composeApp */;
+			targetProxy = A07D7942EF54E690D021DBFF9082FB1C /* PBXContainerItemProxy */;
+		};
+		F7F8B6856F7C35EBE6F0D7AE16592C0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reachability;
+			target = CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */;
+			targetProxy = 2FAFF5A2682FB3996B0EE63C50A4CA29 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0883D3F19546E64788E534DEF8A5B6E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D2D79531596BF868BF1C132BC26D44E /* Reachability.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Reachability";
-				IBSC_MODULE = Reachability;
-				INFOPLIST_FILE = "Target Support Files/Reachability/ResourceBundle-Reachability_Privacy-Reachability-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = Reachability_Privacy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		21132651670CC285F23AD4D8A8105F02 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCE9AEB97135A3172216167DE33409C3 /* composeApp.debug.xcconfig */;
+			baseConfigurationReference = 9226C33213D1043294836514FD1525D8 /* composeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -609,7 +596,7 @@
 		};
 		6D011DE50F4E0D6FF88E038ABA5277ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F64BADB16C311E9D09DAD0116F684F4 /* Pods-iosApp.debug.xcconfig */;
+			baseConfigurationReference = E462E23B3674BF94EAB1504D506F2803 /* Pods-iosApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -646,7 +633,7 @@
 		};
 		70F530F03F221130D6289A6C1925B723 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FECCB5AFF87D121F15BA01E683C7932 /* Pods-iosApp.release.xcconfig */;
+			baseConfigurationReference = 244FC2DAA936A0B07ACEFDC74E2D54B8 /* Pods-iosApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -684,7 +671,7 @@
 		};
 		79D47125193BFF20842B63BCC32A2C95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 362FCE829765102E526ECA8787C62CED /* composeApp.release.xcconfig */;
+			baseConfigurationReference = D06DBCD4D25D12FD0C2E00FF1E1E65A9 /* composeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -697,6 +684,40 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C5755B4BA1F12FD8DB59278652913E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 151F8B5AE4EA5E512F02A7E2AD9ADE07 /* Reachability.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Reachability";
+				IBSC_MODULE = Reachability;
+				INFOPLIST_FILE = "Target Support Files/Reachability/ResourceBundle-Reachability_Privacy-Reachability-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = Reachability_Privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8048F3B8BB2A862E4FF6DAEC697FC5C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D2D79531596BF868BF1C132BC26D44E /* Reachability.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Reachability";
+				IBSC_MODULE = Reachability;
+				INFOPLIST_FILE = "Target Support Files/Reachability/ResourceBundle-Reachability_Privacy-Reachability-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = Reachability_Privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -761,23 +782,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		CBF9D1EC9FB7CB56191D9089C78A1965 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 151F8B5AE4EA5E512F02A7E2AD9ADE07 /* Reachability.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Reachability";
-				IBSC_MODULE = Reachability;
-				INFOPLIST_FILE = "Target Support Files/Reachability/ResourceBundle-Reachability_Privacy-Reachability-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = Reachability_Privacy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 		F105DEC13C0AF4AD6927D5D40AF85A30 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -866,20 +870,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		837B494087B0B20F44D71755F9025D35 /* Build configuration list for PBXNativeTarget "Reachability-Reachability_Privacy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CBF9D1EC9FB7CB56191D9089C78A1965 /* Debug */,
-				0883D3F19546E64788E534DEF8A5B6E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		93DCAB2133C698FD576DC87A8D15EAB1 /* Build configuration list for PBXNativeTarget "Pods-iosApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D011DE50F4E0D6FF88E038ABA5277ED /* Debug */,
 				70F530F03F221130D6289A6C1925B723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6DA151F16E49ACF7BE713198C682AD /* Build configuration list for PBXNativeTarget "Reachability-Reachability_Privacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C5755B4BA1F12FD8DB59278652913E5 /* Debug */,
+				8048F3B8BB2A862E4FF6DAEC697FC5C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

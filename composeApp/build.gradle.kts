@@ -54,18 +54,21 @@ kotlin {
 
     applyDefaultHierarchyTemplate()
 
-         cocoapods {
-            summary = "Cinema/Native module"
-            homepage = "https://github.com/noemibalazs/Cinema"
-            podfile = project.file("../iosApp/Podfile")
+    cocoapods {
+        summary = "Cinema/Native module"
+        homepage = "https://github.com/noemibalazs/Cinema"
+        podfile = project.file("../iosApp/Podfile")
 
-            ios.deploymentTarget = "15.0"
+        ios.deploymentTarget = "15.0"
 
-            pod("Reachability", "~> 3.2")
-
-            xcodeConfigurationToNativeBuildType["CUSTOM_DEBUG"] = NativeBuildType.DEBUG
-            xcodeConfigurationToNativeBuildType["CUSTOM_RELEASE"] = NativeBuildType.RELEASE
+        pod("Reachability", "~> 3.2")
+        framework {
+            baseName = "composeApp"
         }
+
+        xcodeConfigurationToNativeBuildType["CUSTOM_DEBUG"] = NativeBuildType.DEBUG
+        xcodeConfigurationToNativeBuildType["CUSTOM_RELEASE"] = NativeBuildType.RELEASE
+    }
 
     sourceSets {
 
@@ -95,7 +98,9 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.material3.windowsizeclass.multiplatform)
-            implementation(libs.compose.navigation)
+
+            implementation(libs.paging.common)
+            implementation(libs.paging.compose)
 
             implementation(libs.room.runtime)
             implementation(libs.sqlite.bundled)

@@ -11,13 +11,13 @@ compose-tooling-ui = "1.6.8"
 core-splash-screen = "1.0.1"
 coroutines = "1.8.1"
 precompose = "1.5.7"
-navigation = "2.7.0-alpha07"
 
 kotlin = "2.0.0"
 room = "2.7.0-alpha04"
 ksp = "2.0.0-1.0.22"
 sqlite = "2.5.0-alpha04"
 constraint = "0.4.0"
+paging = "3.3.0-alpha02-0.4.0"
 
 ktor = "2.3.12"
 ktor-logging = "2.3.2"
@@ -39,7 +39,6 @@ material3-window-size = "0.5.0"
 buildConfig = "0.15.1"
 toolsCore = "1.0.0-alpha09"
 
-
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "core-splash-screen" }
@@ -50,7 +49,6 @@ compose-constraint = { module = "tech.annexflow.compose:constraintlayout-compose
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose-tooling-ui" }
 material3-windowsizeclass-multiplatform = { group = "dev.chrisbanes.material3", name = "material3-window-size-class-multiplatform", version.ref = "material3-window-size" }
 precompose = { module = "moe.tlaster:precompose", version.ref = "precompose" }
-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation" }
 
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
@@ -87,6 +85,8 @@ json-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-jso
 web-view = { module = "io.github.kevinnzou:compose-webview-multiplatform", version.ref = "web" }
 androidx-tools-core = { group = "androidx.privacysandbox.tools", name = "tools-core", version.ref = "toolsCore" }
 
+paging-common = { module = "app.cash.paging:paging-common", version.ref = "paging" }
+paging-compose = { module = "app.cash.paging:paging-compose-common", version.ref = "paging" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
