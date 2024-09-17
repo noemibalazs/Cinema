@@ -1,26 +1,38 @@
 package com.noemi.cinema
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.noemi.cinema.screens.main.MoviesApp
 import org.jetbrains.compose.ui.tooling.preview.Preview
-
-import cinema.composeapp.generated.resources.Res
+import com.noemi.cinema.theme.CinemaTheme
+import moe.tlaster.precompose.PreComposeApp
 
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
-        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-            Button(onClick = { showContent = !showContent }) {
-                Text("Click me!")
-            }
+    val snackBarHostState = remember { SnackbarHostState() }
+
+    CinemaTheme {
+
+        PreComposeApp {
+
+            Scaffold(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(MaterialTheme.colorScheme.primary),
+                content = {
+                    MoviesApp(snackBarHostState)
+                },
+                snackbarHost = {
+                    SnackbarHost(hostState = snackBarHostState)
+                }
+            )
         }
     }
 }

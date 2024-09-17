@@ -2,13 +2,17 @@ package com.noemi.cinema.di
 
 import com.mirego.konnectivity.Konnectivity
 import com.noemi.cinema.database.MovieDataBase
-import com.noemi.cinema.paging.MoviePaging
 import com.noemi.cinema.paging.config.PopularPagingConfig
 import com.noemi.cinema.paging.config.TopRatedPagingConfig
 import com.noemi.cinema.paging.source.PopularPagingSource
 import com.noemi.cinema.paging.source.TopRatedPagingSource
 import com.noemi.cinema.repository.MovieRepository
 import com.noemi.cinema.repository.MovieRepositoryImpl
+import com.noemi.cinema.screens.details.MovieDetailsViewModel
+import com.noemi.cinema.screens.favorite.FavoriteViewModel
+import com.noemi.cinema.screens.main.MovieViewModel
+import com.noemi.cinema.screens.popular.PopularViewModel
+import com.noemi.cinema.screens.toprated.TopRatedViewModel
 import com.noemi.cinema.service.MovieService
 import com.noemi.cinema.service.MovieServiceImpl
 import io.ktor.client.HttpClient
@@ -29,11 +33,12 @@ fun appModule() = module {
         MovieServiceImpl(client)
     }
     single<CoroutineDispatcher> { Dispatchers.IO }
+
     single { PopularPagingSource(get()) }
     single { TopRatedPagingSource(get()) }
 
-    single<MoviePaging> { PopularPagingConfig(get(), get()) }
-    single<MoviePaging> { TopRatedPagingConfig(get(), get()) }
+    single { PopularPagingConfig(get(), get()) }
+    single { TopRatedPagingConfig(get(), get()) }
 
     single<MovieRepository> {
         val dataBase: MovieDataBase = get()
@@ -43,6 +48,12 @@ fun appModule() = module {
             dispatcher = get()
         )
     }
+
+    factory { TopRatedViewModel(get(), get(), get()) }
+    factory { PopularViewModel(get(), get(), get()) }
+    factory { FavoriteViewModel(get(), get()) }
+    factory { MovieDetailsViewModel(get(), get()) }
+    factory { MovieViewModel(get(), get()) }
 
     single { Konnectivity() }
 }

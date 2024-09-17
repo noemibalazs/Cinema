@@ -7,19 +7,11 @@ import com.noemi.cinema.utils.Constants.YOUTUBE_END
 import com.noemi.cinema.utils.Constants.YOUTUBE_PATH
 import com.noemi.cinema.utils.Constants.YOUTUBE_START
 
-//fun toMovieDetails(movieId: Int) {
-//    val intent = Intent(this, MovieDetailsActivity::class.java)
-//    val bundle = Bundle()
-//    bundle.putInt(KEY_MOVIE_ID, movieId)
-//    intent.putExtras(bundle)
-//    startActivity(intent)
-//}
+fun Movie.toEntity(): MovieEntity =
+    MovieEntity(id = id, title = title, description = description, releaseDate = releaseDate, rating = rating, posterPath = getPoster())
 
-fun Movie.toEntity(placeHolder: String): MovieEntity =
-    MovieEntity(id = id, title = title, description = description, releaseDate = releaseDate, rating = rating, posterPath = getPoster(placeHolder))
-
-fun Movie.getPoster(placeholder: String): String = when (posterPath == null) {
-    true -> placeholder
+fun Movie.getPoster(): String = when (posterPath == null) {
+    true -> Constants.LINK_PLACEHOLDER
     else -> posterPath.getMoviePoster()
 }
 
