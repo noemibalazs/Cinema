@@ -14,6 +14,5 @@ object Constants {
     const val YOUTUBE_START = "https://img.youtube.com/vi/"
     const val YOUTUBE_END = "/0.jpg"
 
-    const val TIME_OUT_MILLIS = 60_000L
     const val LINK_PLACEHOLDER = "https://en.wikipedia.org/wiki/Miss_Sloane#/media/File:Miss_Sloane.png"
 }

@@ -3,10 +3,8 @@ package com.noemi.cinema.di
 import com.noemi.cinema.database.MovieDataBase
 import com.noemi.cinema.room.getDatabase
 import com.noemi.cinema.utils.Constants.BASE_URL
-import com.noemi.cinema.utils.Constants.TIME_OUT_MILLIS
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.darwin.Darwin
-import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.plugins.logging.DEFAULT
@@ -53,11 +51,6 @@ actual fun serviceModule(): Module = module {
 
             install(ContentNegotiation) {
                 json(get())
-            }
-
-            install(HttpTimeout) {
-                requestTimeoutMillis = TIME_OUT_MILLIS
-                connectTimeoutMillis = TIME_OUT_MILLIS
             }
         }
     }

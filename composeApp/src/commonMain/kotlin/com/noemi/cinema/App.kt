@@ -24,8 +24,7 @@ fun App() {
 
             Scaffold(
                 modifier = Modifier
-                    .fillMaxSize()
-                    .background(MaterialTheme.colorScheme.primary),
+                    .fillMaxSize(),
                 content = {
                     MoviesApp(snackBarHostState)
                 },

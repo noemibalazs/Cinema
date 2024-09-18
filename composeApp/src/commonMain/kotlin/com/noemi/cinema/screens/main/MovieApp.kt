@@ -70,7 +70,8 @@ fun MoviesApp(snackBarHostState: SnackbarHostState) {
 
     Column(
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.background(Color.White)
     ) {
         MovieTabLayout(tabs = tabs, pagerState = pagerState)
 
@@ -89,7 +90,7 @@ private fun MovieTabLayout(tabs: List<StringResource>, pagerState: PagerState, m
     val coroutineScope = rememberCoroutineScope()
 
     Box(modifier = modifier.fillMaxWidth().background(MaterialTheme.colorScheme.primary)){
-        Spacer(modifier = modifier.height(30.dp))
+        Spacer(modifier = modifier.height(42.dp))
     }
 
     PrimaryTabRow(
