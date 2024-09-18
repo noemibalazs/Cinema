@@ -7,8 +7,8 @@ First steps:
 Idea:
 
 1. Use Ktor to fetch top rated and popular movies 
-2. Use Paging library to load and display pages of data from a larger dataset as the movie database
-3. Clicking on a movie add it to favorite data base using Room 
+2. Use Paging library to load and display pages of data
+3. Add the movie to the Room database by clicking on it
 4. Use Koin for dependency injection
 5. Monitors the network connection 
 6. Use TabRow and HorizontalPager for navigation
