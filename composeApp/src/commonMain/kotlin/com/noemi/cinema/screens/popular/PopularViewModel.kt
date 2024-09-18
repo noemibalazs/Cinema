@@ -9,10 +9,12 @@ import com.noemi.cinema.model.Movie
 import com.noemi.cinema.paging.config.PopularPagingConfig
 import com.noemi.cinema.repository.MovieRepository
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class PopularViewModel(
@@ -22,7 +24,11 @@ class PopularViewModel(
 ) : BaseViewModel<PagingData<Movie>>(konnectivity, repository) {
 
     private val _popularPagingMovies = MutableStateFlow<PagingData<Movie>>(PagingData.empty())
-    override val payloadState: StateFlow<PagingData<Movie>> = _popularPagingMovies.asStateFlow()
+    override val payloadState: StateFlow<PagingData<Movie>> = _popularPagingMovies.stateIn(
+        scope = viewModelScope,
+        initialValue = PagingData.empty(),
+        started = SharingStarted.WhileSubscribed()
+    )
 
     private val _loadingState = MutableStateFlow(false)
     override val loadingState: StateFlow<Boolean> = _loadingState.asStateFlow()

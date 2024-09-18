@@ -23,18 +23,12 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.repeatOnLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import cinema.composeapp.generated.resources.Res
 import cinema.composeapp.generated.resources.label_pager_tag
 import cinema.composeapp.generated.resources.label_tab_row_tag
@@ -42,28 +36,13 @@ import com.noemi.cinema.pager.TabItem
 import com.noemi.cinema.screens.favorite.FavoriteScreen
 import com.noemi.cinema.screens.popular.PopularScreen
 import com.noemi.cinema.screens.toprated.TopRatedScreen
-import com.noemi.cinema.utils.NoNetworkConnection
 import kotlinx.coroutines.launch
-import moe.tlaster.precompose.flow.collectAsStateWithLifecycle
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
-import org.koin.mp.KoinPlatform.getKoin
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun MoviesApp(snackBarHostState: SnackbarHostState) {
-
-    val viewModel: MovieViewModel = viewModel { getKoin().get() }
-    val hasNetworkConnection by viewModel.networkState.collectAsStateWithLifecycle()
-    val lifecycleOwner = LocalLifecycleOwner.current
-
-    val scope = rememberCoroutineScope()
-
-    LaunchedEffect(Unit) {
-        lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-            viewModel.monitorNetworkState(scope)
-        }
-    }
 
     val tabs = TabItem.getMovieTabs().map { it.tab }
     val pagerState = rememberPagerState(pageCount = { tabs.size }, initialPage = 0)
@@ -75,10 +54,7 @@ fun MoviesApp(snackBarHostState: SnackbarHostState) {
     ) {
         MovieTabLayout(tabs = tabs, pagerState = pagerState)
 
-        when (hasNetworkConnection) {
-            true -> MovieTabContent(pagerState = pagerState, snackBarHostState = snackBarHostState)
-            else -> NoNetworkConnection()
-        }
+        MovieTabContent(pagerState = pagerState, snackBarHostState = snackBarHostState)
     }
 }
 

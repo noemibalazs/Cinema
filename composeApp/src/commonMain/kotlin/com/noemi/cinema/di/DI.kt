@@ -10,7 +10,6 @@ import com.noemi.cinema.repository.MovieRepository
 import com.noemi.cinema.repository.MovieRepositoryImpl
 import com.noemi.cinema.screens.details.MovieDetailsViewModel
 import com.noemi.cinema.screens.favorite.FavoriteViewModel
-import com.noemi.cinema.screens.main.MovieViewModel
 import com.noemi.cinema.screens.popular.PopularViewModel
 import com.noemi.cinema.screens.toprated.TopRatedViewModel
 import com.noemi.cinema.service.MovieService
@@ -53,7 +52,6 @@ fun appModule() = module {
     factory { PopularViewModel(get(), get(), get()) }
     factory { FavoriteViewModel(get(), get()) }
     factory { MovieDetailsViewModel(get(), get()) }
-    factory { MovieViewModel(get(), get()) }
 
     single { Konnectivity() }
 }

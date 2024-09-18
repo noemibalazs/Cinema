@@ -101,14 +101,14 @@ fun DetailsScreen(snackBarHostState: SnackbarHostState, movieId: Int, modifier: 
     val movie by viewModel.payloadState.collectAsStateWithLifecycle()
     val reviews by viewModel.reviewsState.collectAsStateWithLifecycle()
     val trailers by viewModel.trailersState.collectAsStateWithLifecycle()
-    val hasConnection by viewModel.networkState.collectAsStateWithLifecycle()
+    val hasNetworkConnection by viewModel.networkState.collectAsStateWithLifecycle()
     val errorMessage by viewModel.errorState.collectAsStateWithLifecycle()
     val isLoading by viewModel.loadingState.collectAsStateWithLifecycle()
 
-    LaunchedEffect(key1 = movieId) {
+    LaunchedEffect(key1 = true) {
         lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
             viewModel.monitorNetworkState(scope)
-            scope.launch { viewModel.loadMovieDetails(movieId) }
+            viewModel.loadMovieDetails(movieId)
         }
     }
 
@@ -124,7 +124,7 @@ fun DetailsScreen(snackBarHostState: SnackbarHostState, movieId: Int, modifier: 
                 movie = movie,
                 trailers = trailers,
                 reviews = reviews,
-                activeNetwork = hasConnection,
+                activeNetwork = hasNetworkConnection,
                 movieRating = viewModel::getMovieRating,
                 snackBarHostState = snackBarHostState
             )

@@ -10,10 +10,12 @@ import com.noemi.cinema.paging.config.TopRatedPagingConfig
 import com.noemi.cinema.repository.MovieRepository
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class TopRatedViewModel(
@@ -29,7 +31,11 @@ class TopRatedViewModel(
     override val errorState: StateFlow<String> = _errorState.asStateFlow()
 
     private val _topRatedPagingMovie = MutableStateFlow<PagingData<Movie>>(PagingData.empty())
-    override val payloadState: StateFlow<PagingData<Movie>> = _topRatedPagingMovie.asStateFlow()
+    override val payloadState: StateFlow<PagingData<Movie>> = _topRatedPagingMovie.stateIn(
+        scope = viewModelScope,
+        initialValue = PagingData.empty(),
+        started = SharingStarted.WhileSubscribed()
+    )
 
     init {
         loadTopRatedMovies()
