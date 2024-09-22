@@ -31,11 +31,7 @@ class TopRatedViewModel(
     override val errorState: StateFlow<String> = _errorState.asStateFlow()
 
     private val _topRatedPagingMovie = MutableStateFlow<PagingData<Movie>>(PagingData.empty())
-    override val payloadState: StateFlow<PagingData<Movie>> = _topRatedPagingMovie.stateIn(
-        scope = viewModelScope,
-        initialValue = PagingData.empty(),
-        started = SharingStarted.WhileSubscribed()
-    )
+    override val payloadState: StateFlow<PagingData<Movie>> = _topRatedPagingMovie.asStateFlow()
 
     init {
         loadTopRatedMovies()

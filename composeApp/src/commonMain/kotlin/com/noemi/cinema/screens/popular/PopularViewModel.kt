@@ -24,11 +24,7 @@ class PopularViewModel(
 ) : BaseViewModel<PagingData<Movie>>(konnectivity, repository) {
 
     private val _popularPagingMovies = MutableStateFlow<PagingData<Movie>>(PagingData.empty())
-    override val payloadState: StateFlow<PagingData<Movie>> = _popularPagingMovies.stateIn(
-        scope = viewModelScope,
-        initialValue = PagingData.empty(),
-        started = SharingStarted.WhileSubscribed()
-    )
+    override val payloadState: StateFlow<PagingData<Movie>> = _popularPagingMovies.asStateFlow()
 
     private val _loadingState = MutableStateFlow(false)
     override val loadingState: StateFlow<Boolean> = _loadingState.asStateFlow()
