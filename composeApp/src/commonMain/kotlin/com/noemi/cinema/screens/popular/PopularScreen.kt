@@ -19,7 +19,6 @@ import com.noemi.cinema.utils.MovieLazyGrid
 import com.noemi.cinema.utils.MovieProgressIndicator
 import com.noemi.cinema.utils.NoNetworkConnection
 import com.noemi.cinema.utils.showSnackBar
-import kotlinx.coroutines.launch
 import moe.tlaster.precompose.flow.collectAsStateWithLifecycle
 import org.koin.mp.KoinPlatform.getKoin
 
