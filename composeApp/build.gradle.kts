@@ -181,6 +181,9 @@ android {
 
     dependencies {
         debugImplementation(compose.uiTooling)
+        implementation(libs.androidx.tools.core)
+        add("kspAndroid", libs.room.compiler)
+        add("kspCommonMainMetadata", libs.room.compiler)
     }
 
     composeOptions {
@@ -191,13 +194,6 @@ android {
 room {
     schemaDirectory("$projectDir/schemas")
 }
-
-dependencies {
-    implementation(libs.androidx.tools.core)
-    add("kspAndroid", libs.room.compiler)
-    add("kspCommonMainMetadata", libs.room.compiler)
-}
-
 
 tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinCompile<*>>().configureEach {
     if (name != "kspCommonMainKotlinMetadata") {
