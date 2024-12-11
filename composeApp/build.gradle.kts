@@ -105,7 +105,6 @@ kotlin {
             implementation(libs.room.runtime)
             implementation(libs.sqlite.bundled)
 
-            api(libs.precompose)
             api(libs.mirego.connectivity)
 
             api(libs.koin.core)

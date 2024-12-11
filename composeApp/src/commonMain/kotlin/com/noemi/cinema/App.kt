@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import com.noemi.cinema.screens.main.MoviesApp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import com.noemi.cinema.theme.CinemaTheme
-import moe.tlaster.precompose.PreComposeApp
 
 @Composable
 @Preview
@@ -18,18 +17,15 @@ fun App() {
 
     CinemaTheme {
 
-        PreComposeApp {
-
-            Scaffold(
-                modifier = Modifier
-                    .fillMaxSize(),
-                content = {
-                    MoviesApp(snackBarHostState)
-                },
-                snackbarHost = {
-                    SnackbarHost(hostState = snackBarHostState)
-                }
-            )
-        }
+        Scaffold(
+            modifier = Modifier
+                .fillMaxSize(),
+            content = {
+                MoviesApp(snackBarHostState)
+            },
+            snackbarHost = {
+                SnackbarHost(hostState = snackBarHostState)
+            }
+        )
     }
 }

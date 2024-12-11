@@ -10,7 +10,6 @@ compose-plugin = "1.6.11"
 compose-tooling-ui = "1.6.8"
 core-splash-screen = "1.0.1"
 coroutines = "1.8.1"
-precompose = "1.5.7"
 
 kotlin = "2.0.0"
 room = "2.7.0-alpha04"
@@ -48,7 +47,6 @@ androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmode
 compose-constraint = { module = "tech.annexflow.compose:constraintlayout-compose-multiplatform", version.ref = "constraint" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose-tooling-ui" }
 material3-windowsizeclass-multiplatform = { group = "dev.chrisbanes.material3", name = "material3-window-size-class-multiplatform", version.ref = "material3-window-size" }
-precompose = { module = "moe.tlaster:precompose", version.ref = "precompose" }
 
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
