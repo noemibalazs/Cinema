@@ -74,6 +74,7 @@ import cinema.composeapp.generated.resources.label_summary_tag
 import cinema.composeapp.generated.resources.label_toast_message
 import cinema.composeapp.generated.resources.placeholder
 import cinema.composeapp.generated.resources.up
+import com.multiplatform.webview.web.LoadingState
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewState
 import com.noemi.cinema.utils.getMovieYoutubePath
@@ -420,7 +421,6 @@ fun MovieTrailer(trailer: Trailer, hasNetwork: Boolean, snackBarHostState: Snack
             )
         }
 
-
         Text(
             text = trailer.name,
             style = MaterialTheme.typography.bodySmall,
@@ -502,11 +502,20 @@ private fun CinemaWebView(url: String, onTrailerDismiss: (Boolean) -> Unit, modi
             modifier = modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
-        ) { }
+        ) {
 
-        WebView(
-            state = webViewState,
-            modifier = Modifier.fillMaxSize()
-        )
+            Box(
+                modifier = modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+
+                WebView(
+                    state = webViewState,
+                    modifier = Modifier.fillMaxSize()
+                )
+
+                if (webViewState.loadingState is LoadingState.Loading) MovieProgressIndicator(false)
+            }
+        }
     }
 }

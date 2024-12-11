@@ -75,11 +75,11 @@ fun NoNetworkConnection(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun MovieProgressIndicator() {
+fun MovieProgressIndicator(isDark: Boolean = true) {
     CircularProgressIndicator(
         modifier = Modifier
             .testTag(stringResource(Res.string.label_progress_indicator_tag)),
-        color = MaterialTheme.colorScheme.onPrimaryContainer,
+        color = if (isDark) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.primary,
         strokeWidth = 3.dp
     )
 }
