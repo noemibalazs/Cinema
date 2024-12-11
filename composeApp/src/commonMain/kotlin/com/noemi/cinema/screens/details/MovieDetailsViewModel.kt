@@ -71,15 +71,15 @@ class MovieDetailsViewModel(
     }
 
     fun getMovieRating(): String {
-        when (_movie.value.rating.toString().length >= 4) {
+        return when (_movie.value.rating.toString().length >= 4) {
             true -> {
                 val rating = _movie.value.rating.toString().substring(0, 4)
-                return "Rating: $rating"
+                "Rating: $rating"
             }
 
             else -> {
                 val rating = _movie.value.rating.toString()
-                return "Rating: $rating"
+                "Rating: $rating"
             }
         }
     }

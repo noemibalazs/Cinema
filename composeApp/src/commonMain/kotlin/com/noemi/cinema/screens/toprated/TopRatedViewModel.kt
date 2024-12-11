@@ -42,8 +42,6 @@ class TopRatedViewModel(
 
             _loadingState.emit(true)
 
-            delay(1200)
-
             topRatedPagingConfig.loadMovies()
                 .catch {
                     _loadingState.emit(false)

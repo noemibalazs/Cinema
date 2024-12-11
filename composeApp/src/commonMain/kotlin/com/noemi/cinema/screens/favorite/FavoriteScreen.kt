@@ -33,13 +33,14 @@ fun FavoriteScreen(snackBarHostState: SnackbarHostState) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        when (isLoading) {
-            true -> MovieProgressIndicator()
-            else -> MovieGrid(movies = movies, onMovieClicked = viewModel::saveMovie, snackBarHostState = snackBarHostState)
-        }
+        MovieGrid(
+            movies = movies,
+            onMovieClicked = {},
+            snackBarHostState = snackBarHostState
+        )
 
-        if (errorMessage.isNotEmpty()) {
-            showSnackBar(snackBarHostState = snackBarHostState, message = errorMessage, scope = scope)
-        }
+        if (isLoading) MovieProgressIndicator()
+
+        if (errorMessage.isNotEmpty()) showSnackBar(snackBarHostState = snackBarHostState, message = errorMessage, scope = scope)
     }
 }

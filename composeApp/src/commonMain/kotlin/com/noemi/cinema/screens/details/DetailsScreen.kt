@@ -107,7 +107,6 @@ fun DetailsScreen(snackBarHostState: SnackbarHostState, movieId: Int, modifier: 
 
     LaunchedEffect(key1 = true) {
         lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-            viewModel.monitorNetworkState(scope)
             viewModel.loadMovieDetails(movieId)
         }
     }
