@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -13,7 +14,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.noemi.cinema.utils.MovieGrid
 import com.noemi.cinema.utils.MovieProgressIndicator
 import com.noemi.cinema.utils.showSnackBar
-import moe.tlaster.precompose.flow.collectAsStateWithLifecycle
 import org.koin.mp.KoinPlatform.getKoin
 
 
@@ -23,9 +23,9 @@ fun FavoriteScreen(snackBarHostState: SnackbarHostState) {
     val viewModel: FavoriteViewModel = viewModel { getKoin().get() }
     val scope = rememberCoroutineScope()
 
-    val movies by viewModel.payloadState.collectAsStateWithLifecycle()
-    val isLoading by viewModel.loadingState.collectAsStateWithLifecycle()
-    val errorMessage by viewModel.errorState.collectAsStateWithLifecycle()
+    val movies by viewModel.payloadState.collectAsState()
+    val isLoading by viewModel.loadingState.collectAsState()
+    val errorMessage by viewModel.errorState.collectAsState()
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -33,13 +33,14 @@ fun FavoriteScreen(snackBarHostState: SnackbarHostState) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        MovieGrid(
-            movies = movies,
-            onMovieClicked = {},
-            snackBarHostState = snackBarHostState
-        )
-
-        if (isLoading) MovieProgressIndicator()
+        when (isLoading) {
+            true -> MovieProgressIndicator()
+            else -> MovieGrid(
+                movies = movies,
+                onMovieClicked = {},
+                snackBarHostState = snackBarHostState
+            )
+        }
 
         if (errorMessage.isNotEmpty()) showSnackBar(snackBarHostState = snackBarHostState, message = errorMessage, scope = scope)
     }

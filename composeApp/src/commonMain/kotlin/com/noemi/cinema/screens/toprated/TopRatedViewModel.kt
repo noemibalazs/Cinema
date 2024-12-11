@@ -41,6 +41,7 @@ class TopRatedViewModel(
         viewModelScope.launch {
 
             _loadingState.emit(true)
+            delay(900)
 
             topRatedPagingConfig.loadMovies()
                 .catch {

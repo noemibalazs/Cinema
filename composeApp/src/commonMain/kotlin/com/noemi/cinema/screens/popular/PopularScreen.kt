@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -15,7 +16,6 @@ import com.noemi.cinema.utils.MovieLazyGrid
 import com.noemi.cinema.utils.MovieProgressIndicator
 import com.noemi.cinema.utils.NoNetworkConnection
 import com.noemi.cinema.utils.showSnackBar
-import moe.tlaster.precompose.flow.collectAsStateWithLifecycle
 import org.koin.mp.KoinPlatform.getKoin
 
 @Composable
@@ -25,9 +25,9 @@ fun PopularScreen(snackBarHostState: SnackbarHostState) {
     val scope = rememberCoroutineScope()
 
     val movies = viewModel.payloadState.collectAsLazyPagingItems()
-    val isLoading by viewModel.loadingState.collectAsStateWithLifecycle()
-    val errorMessage by viewModel.errorState.collectAsStateWithLifecycle()
-    val hasNetworkConnection by viewModel.networkState.collectAsStateWithLifecycle()
+    val isLoading by viewModel.loadingState.collectAsState()
+    val errorMessage by viewModel.errorState.collectAsState()
+    val hasNetworkConnection by viewModel.networkState.collectAsState()
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -35,14 +35,11 @@ fun PopularScreen(snackBarHostState: SnackbarHostState) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        when {
-            hasNetworkConnection -> MovieLazyGrid(
-                movies = movies,
-                onMovieClicked = viewModel::saveMovie,
-                snackBarHostState = snackBarHostState
-            )
-
-            isLoading -> MovieProgressIndicator()
+        when (hasNetworkConnection) {
+            true -> when (isLoading) {
+                true -> MovieProgressIndicator()
+                else -> MovieLazyGrid(movies = movies, onMovieClicked = viewModel::saveMovie, snackBarHostState = snackBarHostState)
+            }
             else -> NoNetworkConnection()
         }
 

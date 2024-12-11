@@ -56,18 +56,15 @@ import com.noemi.cinema.utils.MovieProgressIndicator
 import com.noemi.cinema.utils.getPoster
 import com.noemi.cinema.utils.showSnackBar
 import kotlinx.coroutines.launch
-import moe.tlaster.precompose.flow.collectAsStateWithLifecycle
 import org.jetbrains.compose.resources.stringResource
 import org.koin.mp.KoinPlatform.getKoin
 import androidx.compose.foundation.lazy.items
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.window.Dialog
 import androidx.constraintlayout.compose.Dimension
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.repeatOnLifecycle
 import cinema.composeapp.generated.resources.down
 import cinema.composeapp.generated.resources.label_icon_down_tag
 import cinema.composeapp.generated.resources.label_movie_trailer
@@ -96,19 +93,16 @@ fun DetailsScreen(snackBarHostState: SnackbarHostState, movieId: Int, modifier: 
 
     val viewModel: MovieDetailsViewModel = viewModel { getKoin().get() }
     val scope = rememberCoroutineScope()
-    val lifecycleOwner = LocalLifecycleOwner.current
 
-    val movie by viewModel.payloadState.collectAsStateWithLifecycle()
-    val reviews by viewModel.reviewsState.collectAsStateWithLifecycle()
-    val trailers by viewModel.trailersState.collectAsStateWithLifecycle()
-    val hasNetworkConnection by viewModel.networkState.collectAsStateWithLifecycle()
-    val errorMessage by viewModel.errorState.collectAsStateWithLifecycle()
-    val isLoading by viewModel.loadingState.collectAsStateWithLifecycle()
+    val movie by viewModel.payloadState.collectAsState()
+    val reviews by viewModel.reviewsState.collectAsState()
+    val trailers by viewModel.trailersState.collectAsState()
+    val hasNetworkConnection by viewModel.networkState.collectAsState()
+    val errorMessage by viewModel.errorState.collectAsState()
+    val isLoading by viewModel.loadingState.collectAsState()
 
     LaunchedEffect(key1 = true) {
-        lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-            viewModel.loadMovieDetails(movieId)
-        }
+        viewModel.loadMovieDetails(movieId)
     }
 
     Column(
