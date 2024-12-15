@@ -18,6 +18,7 @@ import io.ktor.client.HttpClient
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
+import org.koin.compose.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
@@ -48,10 +49,10 @@ fun appModule() = module {
         )
     }
 
-    factory { TopRatedViewModel(get(), get(), get()) }
-    factory { PopularViewModel(get(), get(), get()) }
-    factory { FavoriteViewModel(get(), get()) }
-    factory { MovieDetailsViewModel(get(), get()) }
+    viewModel { TopRatedViewModel(get(), get(), get()) }
+    viewModel {  PopularViewModel(get(), get(), get()) }
+    viewModel {  FavoriteViewModel(get(), get()) }
+    viewModel { MovieDetailsViewModel(get(), get()) }
 
     single { Konnectivity() }
 }
