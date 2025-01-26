@@ -21,19 +21,19 @@ class MovieDetailsViewModel(
     private val repository: MovieRepository
 ) : BaseViewModel<Movie>(konnectivity, repository) {
 
-    private var _loadingState = MutableStateFlow(false)
+    private val _loadingState = MutableStateFlow(false)
     override val loadingState: StateFlow<Boolean> = _loadingState.asStateFlow()
 
-    private var _trailers = MutableStateFlow(emptyList<Trailer>())
+    private val _trailers = MutableStateFlow(emptyList<Trailer>())
     val trailersState: StateFlow<List<Trailer>> = _trailers.asStateFlow()
 
-    private var _reviews = MutableStateFlow(emptyList<Review>())
+    private val _reviews = MutableStateFlow(emptyList<Review>())
     val reviewsState: StateFlow<List<Review>> = _reviews.asStateFlow()
 
-    private var _errorState = MutableStateFlow("")
+    private val _errorState = MutableStateFlow("")
     override val errorState: StateFlow<String> = _errorState.asStateFlow()
 
-    private var _movie = MutableStateFlow(Movie())
+    private val _movie = MutableStateFlow(Movie())
     override val payloadState: StateFlow<Movie> = _movie.asStateFlow()
 
     fun loadMovieDetails(movieId: Int) {
