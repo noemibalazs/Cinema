@@ -3,9 +3,9 @@ package com.noemi.cinema.paging.source
 import androidx.paging.PagingState
 import app.cash.paging.PagingSource
 import com.noemi.cinema.model.Movie
-import com.noemi.cinema.service.MovieService
+import com.noemi.cinema.repository.MovieRepository
 
-class TopRatedPagingSource(private val service: MovieService) : PagingSource<Int, Movie>() {
+class TopRatedPagingSource(private val repository: MovieRepository) : PagingSource<Int, Movie>() {
 
     override fun getRefreshKey(state: PagingState<Int, Movie>): Int? {
         return state.anchorPosition?.let {
@@ -17,7 +17,7 @@ class TopRatedPagingSource(private val service: MovieService) : PagingSource<Int
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Movie> {
         return try {
             val position = params.key ?: 1
-            val response = service.loadTopRatedMovies(position)
+            val response = repository.loadTopRatedMovies(position)
 
             when (response.movies.isNotEmpty()) {
                 true -> LoadResult.Page(

@@ -22,7 +22,7 @@ abstract class BaseViewModel<T : Any>(
     abstract val errorState: StateFlow<String>
     abstract val payloadState: StateFlow<T>
 
-    private var _networkState = MutableStateFlow(false)
+    private val _networkState = MutableStateFlow(false)
     val networkState: StateFlow<Boolean> = _networkState.asStateFlow()
 
     init {
